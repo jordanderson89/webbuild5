@@ -226,6 +226,19 @@ p {
     padding: 0;
 }
 
+.p-websamples-top, .p-websamples-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.s-sample {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 1000px) {
     
     header {
