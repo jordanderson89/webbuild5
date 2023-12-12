@@ -95,69 +95,24 @@ main {
     width: 100%;
 }
 
-.s-aboutme {
+.s-aboutme, .s-interests, .s-skills {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: #222629;
     padding: 20px;
     width: 30%;
+    border-radius: 25px;
 }
 
-.s-aboutme-title {
+.s-aboutme-title, .s-interests-title, .s-skills-title {
     font-family: 'Anton';
     font-size: 1.75rem;
     color: #86c232;
     padding-left: 15px;
 }
 
-.s-aboutme-content {
-    font-family: 'Anton';
-    font-size: 1.25rem;
-    text-align: left;
-    padding: 15px;
-}
-
-.s-skills {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: #222629;
-    padding: 20px;
-    width: 30%;
-}
-
-.s-skills-title {
-    font-family: 'Anton';
-    font-size: 1.75rem;
-    color: #86c232;
-    padding-left: 15px;
-}
-
-.s-skills-content {
-    font-family: 'Anton';
-    font-size: 1.25rem;
-    text-align: left;
-    padding: 15px;
-}
-
-.s-interests {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: #222629;
-    padding: 20px;
-    width: 30%;
-}
-
-.s-interests-title {
-    font-family: 'Anton';
-    font-size: 1.75rem;
-    color: #86c232;
-    padding-left: 15px;
-}
-
-.s-interests-content {
+.s-aboutme-content, .s-skills-content, .s-interests-content {
     font-family: 'Anton';
     font-size: 1.25rem;
     text-align: left;
@@ -169,7 +124,7 @@ main {
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    margin-top: 2rem;
+    margin-top: auto;
 }
 
 .g-footer a {
@@ -199,6 +154,7 @@ i {
     max-width: 500px;
     background-color: #222629;
     font-size: 1rem;
+    border-radius: 25px;
 }
 
 .p-title {
@@ -226,17 +182,44 @@ p {
     padding: 0;
 }
 
-.p-websamples-top, .p-websamples-bottom {
+.p-websamples-top, .p-websamples-bottom, .p-artsamples {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    margin-top: 10px;
+    align-items:last baseline;
+    font-family: 'Anton';
 }
 
-.s-sample {
+.s-sample, .s-artblock {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: left;
+    max-width: 500px;
+    background-color: #222629;
+    border-radius: 25px;
+}
+
+.s-sampleheading, .s-artheading {
+    color: #86c232;
+    font-size: 1.3rem;
+}
+
+.s-sampleinfo, .s-artinfo {
+    padding: 5px 10px;
+}
+
+img {
+    border-radius: 15px;
+}
+
+.p-artsamples {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Anton';
 }
 
 @media (max-width: 1000px) {
@@ -272,7 +255,7 @@ p {
         padding-right: 0px;
     }
 
-    img {
+    .s-mugshot {
         width: 350px;
         height: 350px;
     }
@@ -283,6 +266,26 @@ p {
 
     .p-content-boxes {
         margin-top: 1rem;
+    }
+
+    .p-websamples-top, .p-websamples-bottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 15px;
+        width: 100%;
+    }
+
+    .s-sample {
+        margin-bottom: 15px;
+        max-width: 500px;
+    }
+
+    .p-artsamples {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
     }
 
 }
